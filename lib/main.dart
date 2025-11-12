@@ -1,5 +1,5 @@
-import 'package:baazar/features/onboarding/pages/splash_screen.dart';
-import 'package:baazar/shared/theme/app_theme.dart';
+import 'features/onboarding/pages/splash_screen.dart';
+import 'shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

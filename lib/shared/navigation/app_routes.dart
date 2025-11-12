@@ -1,3 +1,3 @@
 import '../../features/onboarding/pages/splash_screen.dart';
 
-final routes = {SplashScreen.route: (context) => SplashScreen()};
+final routes = {SplashScreen.route: (context) => const SplashScreen()};
