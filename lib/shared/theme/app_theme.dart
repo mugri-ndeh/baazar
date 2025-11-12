@@ -1,3 +1,4 @@
+import 'package:baazar/gen/fonts.gen.dart';
 import 'package:baazar/shared/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +7,24 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.white,
-    bottomAppBarTheme: BottomAppBarThemeData(surfaceTintColor: AppColors.white),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      type: BottomNavigationBarType.fixed,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      backgroundColor: AppColors.gray50,
+      selectedIconTheme: IconThemeData(color: AppColors.primary),
+      unselectedIconTheme: IconThemeData(color: AppColors.gray500),
+      selectedLabelStyle: TextStyle(
+        color: AppColors.primary,
+        fontFamily: FontFamily.roboto,
+      ),
+      unselectedLabelStyle: TextStyle(
+        color: AppColors.gray500,
+        fontFamily: FontFamily.roboto,
+      ),
+      selectedItemColor: AppColors.primary,
+      unselectedItemColor: AppColors.gray500,
+    ),
     buttonTheme: ButtonThemeData(
       height: 48.h,
       minWidth: 327.w,
@@ -18,10 +36,15 @@ class AppTheme {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        minimumSize: Size(327.w, 48.h),
+        minimumSize: Size(double.infinity, 48.h),
         side: BorderSide(color: AppColors.primary),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(48.sp),
+        ),
+        textStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 16.sp,
+          color: AppColors.primary,
         ),
       ),
     ),
@@ -30,10 +53,11 @@ class AppTheme {
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
         disabledBackgroundColor: AppColors.gray500,
-        minimumSize: Size(327.w, 48.h),
+        minimumSize: Size(double.infinity, 48.h),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(48.sp),
         ),
+        textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.sp),
       ),
     ),
 
@@ -51,8 +75,42 @@ class AppTheme {
     ),
     primaryColor: AppColors.primary,
     textTheme: TextTheme(
-      displayLarge: TextStyle(),
-      bodyLarge: TextStyle(),
+      displayLarge: TextStyle(
+        fontSize: 24.sp,
+        fontWeight: FontWeight.w600,
+        color: AppColors.gray900,
+        fontFamily: FontFamily.openSans,
+      ),
+      displayMedium: TextStyle(
+        fontSize: 20.sp,
+        fontWeight: FontWeight.w600,
+        color: AppColors.gray900,
+        fontFamily: FontFamily.openSans,
+      ),
+      displaySmall: TextStyle(
+        fontSize: 18.sp,
+        fontWeight: FontWeight.w400,
+        color: AppColors.gray900,
+        fontFamily: FontFamily.openSans,
+      ),
+      bodyLarge: TextStyle(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w600,
+        color: AppColors.gray900,
+        fontFamily: FontFamily.roboto,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w400,
+        color: AppColors.gray900,
+        fontFamily: FontFamily.roboto,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 14.sp,
+        fontWeight: FontWeight.w400,
+        color: AppColors.gray900,
+        fontFamily: FontFamily.roboto,
+      ),
       // etc.
     ),
   );
