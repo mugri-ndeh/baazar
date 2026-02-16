@@ -143,6 +143,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/Plus.svg
   SvgGenImage get plus => const SvgGenImage('assets/icons/Plus.svg');
 
+  /// File path: assets/icons/passwordHide.svg
+  SvgGenImage get passwordHide =>
+      const SvgGenImage('assets/icons/passwordHide.svg');
+
   /// File path: assets/icons/payment.svg
   SvgGenImage get payment => const SvgGenImage('assets/icons/payment.svg');
 
@@ -166,6 +170,7 @@ class $AssetsIconsGen {
     phoneFill,
     phoneOutline,
     plus,
+    passwordHide,
     payment,
   ];
 }

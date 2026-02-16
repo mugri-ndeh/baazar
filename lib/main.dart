@@ -1,3 +1,6 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'features/onboarding/cubit/onboarding_cubit.dart';
 import 'features/onboarding/pages/splash_screen.dart';
 import 'shared/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +10,12 @@ import 'shared/navigation/app_routes.dart';
 import 'shared/navigation/route_config.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiBlocProvider(
+      providers: [BlocProvider(create: (_) => OnboardingCubit())],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

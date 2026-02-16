@@ -25,7 +25,7 @@ class AppTheme {
       selectedItemColor: AppColors.primary,
       unselectedItemColor: AppColors.gray500,
     ),
-    chipTheme: ChipThemeData(),
+    chipTheme: const ChipThemeData(),
     buttonTheme: ButtonThemeData(
       height: 48.h,
       minWidth: 327.w,
